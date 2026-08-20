@@ -18,14 +18,14 @@ const RecentProjects = () => {
             href={item.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center w-full max-w-sm"
+            className="h-[36rem] sm:h-[38rem] lg:h-[42rem] flex items-center justify-center w-full max-w-sm lg:max-w-md"
             key={item.id}
           >
             <PinContainer
               title={item.link.replace(/^https?:\/\//, "")}
               href={item.link}
             >
-              <div className="relative flex items-center justify-center w-full overflow-hidden h-[40vh] lg:h-[30vh] mb-10">
+              <div className="relative flex items-center justify-center w-full overflow-hidden h-52 sm:h-56 lg:h-64 mb-6">
                 <div
                   className="relative w-full h-full overflow-hidden lg:rounded-3xl"
                   style={{ backgroundColor: "#13162D" }}
@@ -41,26 +41,21 @@ const RecentProjects = () => {
                 />
               </div>
 
-              <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-2">
+              <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-2 min-h-[3.5rem]">
                 {item.title}
               </h1>
 
-              <div className="relative">
-                <p
-                  className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2 group-hover/pin:line-clamp-none transition-all duration-300"
-                  style={{
-                    color: "#BEC1DD",
-                    margin: "1vh 0",
-                  }}
-                >
-                  {item.des}
-                </p>
-                <span className="text-xs text-purple/80 group-hover/pin:hidden">
-                  Hover to read more
-                </span>
-              </div>
+              <p
+                className="lg:text-lg lg:font-normal font-light text-sm line-clamp-3"
+                style={{
+                  color: "#BEC1DD",
+                  margin: "0.75rem 0",
+                }}
+              >
+                {item.des}
+              </p>
 
-              <div className="flex items-center justify-between mt-7 mb-3">
+              <div className="flex items-center justify-between mt-4 mb-3">
                 <div className="flex items-center">
                   {item.iconLists.map((icon, index) => (
                     <div
