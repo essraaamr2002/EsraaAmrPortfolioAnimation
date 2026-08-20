@@ -1,6 +1,6 @@
 import { FaLocationArrow } from "react-icons/fa6";
 
-import { socialMedia } from "@/data";
+import { socialMedia, contactInfo } from "@/data";
 import MagicButton from "./ui/MagicButton";
 
 const Footer = () => {
@@ -24,27 +24,46 @@ const Footer = () => {
           Reach out to me today and let&apos;s discuss how I can help you
           achieve your goals.
         </p>
-        <a href="mailto:contact@jsmastery.pro">
+        <a href={`mailto:${contactInfo.email}`}>
           <MagicButton
             title="Let's get in touch"
             icon={<FaLocationArrow />}
             position="right"
           />
         </a>
+
+        <div className="flex flex-wrap justify-center gap-x-8 gap-y-3 mt-10 text-sm md:text-base text-white-200">
+          <a
+            href={`mailto:${contactInfo.email}`}
+            className="hover:text-purple transition-colors"
+          >
+            {contactInfo.email}
+          </a>
+          <a
+            href={`tel:${contactInfo.phone}`}
+            className="hover:text-purple transition-colors"
+          >
+            {contactInfo.phone}
+          </a>
+          <span>{contactInfo.location}</span>
+        </div>
       </div>
       <div className="flex mt-16 md:flex-row flex-col justify-between items-center">
         <p className="md:text-base text-sm md:font-normal font-light">
-          Copyright © 2024 Esraa Amr
+          Copyright © 2026 Esraa Amr
         </p>
 
         <div className="flex items-center md:gap-3 gap-6">
           {socialMedia.map((info) => (
-            <div
+            <a
               key={info.id}
-              className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300"
+              href={info.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300 hover:border-purple transition-colors"
             >
               <img src={info.img} alt="icons" width={20} height={20} />
-            </div>
+            </a>
           ))}
         </div>
       </div>

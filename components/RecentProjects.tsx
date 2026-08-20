@@ -7,20 +7,23 @@ import { PinContainer } from './ui/Pin'
 
 const RecentProjects = () => {
   return (
-    <div className="py-20">
+    <div className="py-20" id="projects">
       <h1 className="heading">
         A small selection of{" "}
         <span className="text-purple">recent projects</span>
       </h1>
       <div className="flex flex-wrap items-center justify-center p-4 gap-x-24 gap-y-8 mt-10">
         {projects.map((item) => (
-          <div
+          <a
+            href={item.link}
+            target="_blank"
+            rel="noopener noreferrer"
             className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
             key={item.id}
           >
             <PinContainer
-              title="/ui.aceternity.com"
-              href="https://www.linkedin.com/feed/"
+              title={item.link.replace(/^https?:\/\//, "")}
+              href={item.link}
             >
               <div className="relative flex items-center justify-center sm:w-96 w-[95vw] overflow-hidden h-[40vh] lg:h-[30vh] mb-10">
                 <div
@@ -40,15 +43,20 @@ const RecentProjects = () => {
                 {item.title}
               </h1>
 
-              <p
-                className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2"
-                style={{
-                  color: "#BEC1DD",
-                  margin: "1vh 0",
-                }}
-              >
-                {item.des}
-              </p>
+              <div className="relative">
+                <p
+                  className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2 group-hover/pin:line-clamp-none transition-all duration-300"
+                  style={{
+                    color: "#BEC1DD",
+                    margin: "1vh 0",
+                  }}
+                >
+                  {item.des}
+                </p>
+                <span className="text-xs text-purple/80 group-hover/pin:hidden">
+                  Hover to read more
+                </span>
+              </div>
 
               <div className="flex items-center justify-between mt-7 mb-3">
                 <div className="flex items-center">
@@ -73,7 +81,7 @@ const RecentProjects = () => {
                 </div>
               </div>
             </PinContainer>
-          </div>
+          </a>
         ))}
       </div>
     </div>

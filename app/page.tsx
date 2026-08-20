@@ -2,11 +2,14 @@ import Grid from "@/components/Grid";
 import Hero from "@/components/Hero";
 import { FloatingNav } from "@/components/ui/FloatingNav";
 import RecentProjects from "@/components/RecentProjects";
-import { FaHome } from "react-icons/fa";
+import CommunityProjects from "@/components/CommunityProjects";
+// import { FaHome } from "react-icons/fa";
 import { navItems } from "@/data";
-import Clients from "@/components/Clients";
 import Experience from "@/components/Experience";
+import Skills from "@/components/Skills";
+import Instructor from "@/components/Instructor";
 import Approach from "@/components/Approach";
+import Clients from "@/components/Clients";
 import Footer from "@/components/Footer";
 
 
@@ -18,8 +21,11 @@ export default function Home() {
         <Hero/>
         <Grid/>
         <RecentProjects/>
-        <Clients/>
+        <CommunityProjects/>
+        <Skills/>
         <Experience/>
+        <Instructor/>
+        <Clients/>
         <Approach/>
         <Footer/>
       </div>

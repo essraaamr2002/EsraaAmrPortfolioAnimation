@@ -2,7 +2,8 @@ import React from 'react'
 import { Spotlight } from './Spotlight'
 import { TextGenerateEffect } from './ui/TextGenerateEffect'
 import MagicButton from './ui/MagicButton';
-import { FaLocationArrow } from 'react-icons/fa';
+import { FaLocationArrow, FaDownload } from 'react-icons/fa';
+import { contactInfo } from '@/data';
 
 const Hero = () => {
   return (
@@ -21,17 +22,17 @@ const Hero = () => {
       </div>
 
       {/* grid section */}
-      <div
+      {/* <div
         className="h-screen w-full dark:bg-black-100 bg-white dark:bg-grid-white/[0.03] bg-grid-black/[0.2]
         absolute top-0 left-0 z-0 flex items-center justify-center"
       >
-        {/* Radial gradient for the container to give a faded look */}
+        
         <div
           className="absolute pointer-events-none inset-0 flex items-center justify-center
            dark:bg-black-100
            bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"
         />
-      </div>
+      </div> */}
 
       {/* Dynamic Web Magic with Next.js */}
       <div className="flex justify-center relative mt-8 z-10">
@@ -50,18 +51,27 @@ const Hero = () => {
 
       <p
         className="text-center md:tracking-wider mb-10 text-sm md:text-lg lg:text-2xl"
-         
+
       >
-        Hi, I&apos;m Esraa, a Next.js Developer based in Egypt
+        Hi, I&apos;m Esraa, a React.js / Next.js Developer based in Egypt
       </p>
 
-      <a href="#about">
-            <MagicButton
-              title="Show my work"
-              icon={<FaLocationArrow />}
-              position="center"
-            />
-      </a>
+      <div className="flex flex-wrap gap-4 justify-center items-center">
+        <a href="#about">
+          <MagicButton
+            title="Show my work"
+            icon={<FaLocationArrow />}
+            position="center"
+          />
+        </a>
+        <a href={contactInfo.resume} download>
+          <MagicButton
+            title="Download CV"
+            icon={<FaDownload />}
+            position="left"
+          />
+        </a>
+      </div>
     </div>
   );
 };
