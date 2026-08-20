@@ -12,13 +12,13 @@ const RecentProjects = () => {
         A small selection of{" "}
         <span className="text-purple">recent projects</span>
       </h1>
-      <div className="flex flex-wrap items-center justify-center p-4 gap-x-24 gap-y-8 mt-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-x-10 gap-y-10 justify-items-center p-4 mt-10">
         {projects.map((item) => (
           <a
             href={item.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
+            className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center w-full max-w-sm"
             key={item.id}
           >
             <PinContainer
@@ -41,7 +41,7 @@ const RecentProjects = () => {
                 />
               </div>
 
-              <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
+              <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-2">
                 {item.title}
               </h1>
 
