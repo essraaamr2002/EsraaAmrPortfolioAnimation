@@ -5,13 +5,13 @@ import MagicButton from "./ui/MagicButton";
 
 const Footer = () => {
   return (
-    <footer className="w-full pt-20 pb-10" id="contact">
+    <footer className="relative w-full overflow-hidden pt-20 pb-10" id="contact">
       {/* background grid */}
-      <div className="w-full absolute left-0 -bottom-72 min-h-96">
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 -z-10 h-48">
         <img
           src="/footer-grid.svg"
-          alt="grid"
-          className="w-full h-full opacity-50 "
+          alt=""
+          className="w-full h-full object-cover opacity-30"
         />
       </div>
 

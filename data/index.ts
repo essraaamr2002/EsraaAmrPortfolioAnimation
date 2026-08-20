@@ -193,6 +193,14 @@ export const navItems = [
     },
   ];
 
+  export const education = {
+    school: "Helwan University",
+    degree: "Faculty of Computers and Artificial Intelligence",
+    grade: "Very Good",
+    location: "Cairo, Egypt",
+    period: "2020 – 2024",
+  };
+
   export const certifications = [
     {
       id: 1,
