@@ -2,6 +2,7 @@ export const navItems = [
     { name: "About", link: "#about" },
     { name: "Projects", link: "#projects" },
     { name: "Skills", link: "#skills" },
+    { name: "Certifications", link: "#certifications" },
     { name: "Testimonials", link: "#testimonials" },
     { name: "Contact", link: "#contact" },
   ];
@@ -189,6 +190,41 @@ export const navItems = [
       desc: "Additional coding instructor experience across eYouth, Magarty, and AI School platforms, teaching programming fundamentals and problem-solving to young learners.",
       className: "md:col-span-2",
       thumbnail: "/exp2.svg",
+    },
+  ];
+
+  export const certifications = [
+    {
+      id: 1,
+      title: "Digital Egypt Pioneers Program — React Web Developer",
+      issuer: "Ministry of Communications & Information Technology (DEPI)",
+      date: "Apr – Oct 2024",
+    },
+    {
+      id: 2,
+      title: "Programming with JavaScript",
+      issuer: "Meta, via Coursera",
+      date: "Sep 2024",
+      verifyUrl: "https://coursera.org/verify/IEI0LP12WW4C",
+    },
+    {
+      id: 3,
+      title: "Introduction to Front-End Development",
+      issuer: "Meta, via Coursera",
+      date: "Aug 2024",
+      verifyUrl: "https://coursera.org/verify/Q1HRPGM21SUC",
+    },
+    {
+      id: 4,
+      title: "Introduction to Network Security",
+      issuer: "Information Technology Institute (ITI)",
+      date: "Jan 2024",
+    },
+    {
+      id: 5,
+      title: "Computer Network Fundamentals",
+      issuer: "Information Technology Institute (ITI)",
+      date: "Nov 2023",
     },
   ];
 

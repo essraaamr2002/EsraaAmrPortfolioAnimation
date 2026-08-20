@@ -7,6 +7,7 @@ import CommunityProjects from "@/components/CommunityProjects";
 import { navItems } from "@/data";
 import Experience from "@/components/Experience";
 import Skills from "@/components/Skills";
+import Certifications from "@/components/Certifications";
 import Instructor from "@/components/Instructor";
 import Approach from "@/components/Approach";
 import Clients from "@/components/Clients";
@@ -23,6 +24,7 @@ export default function Home() {
         <RecentProjects/>
         <CommunityProjects/>
         <Skills/>
+        <Certifications/>
         <Experience/>
         <Instructor/>
         <Clients/>
