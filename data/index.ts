@@ -113,14 +113,6 @@ export const navItems = [
       iconLists: ["/re.svg", "/c.svg", "/ts.svg"],
       link: "https://github.com/essraaamr2002/es-movie",
     },
-    {
-      id: 6,
-      title: "Portfolio Website",
-      des: "Personal portfolio showcasing UI animations and professional projects, built with React.js, Next.js, and TailwindCSS.",
-      img: "/p2.svg",
-      iconLists: ["/re.svg", "/next.svg", "/tail.svg"],
-      link: "https://esraa-amr-portfolioanimation.vercel.app/",
-    },
   ];
   
   export const testimonials = [
