@@ -33,7 +33,7 @@ const Certifications = () => {
               <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#10132E] text-purple text-xl group-hover:scale-110 transition-transform">
                 <FaAward />
               </div>
-              {cert.verifyUrl && (
+              {(cert.verifyUrl || cert.verified) && (
                 <span className="flex items-center gap-1 text-xs text-emerald-400">
                   <FaCircleCheck /> Verified
                 </span>

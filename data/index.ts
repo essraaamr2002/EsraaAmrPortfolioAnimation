@@ -199,6 +199,7 @@ export const navItems = [
       title: "Digital Egypt Pioneers Program — React Web Developer",
       issuer: "Ministry of Communications & Information Technology (DEPI)",
       date: "Apr – Oct 2024",
+      verified: true,
     },
     {
       id: 2,
