@@ -24,7 +24,7 @@ const RecentProjects = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: (i % 3) * 0.1 }}
-            className="group flex flex-col overflow-hidden rounded-2xl border border-white/[0.1] bg-[#0b0e28] hover:border-purple/60 hover:-translate-y-1.5 transition-all duration-300"
+            className="group flex flex-col overflow-hidden rounded-2xl border border-white/[0.1] bg-[#0b0e28] hover:border-purple/60 hover:-translate-y-1.5 transition-all duration-300 [transform-style:preserve-3d] [perspective:1200px] lg:hover:[transform:perspective(1200px)_rotateX(4deg)_translateY(-6px)]"
           >
             <div
               className="relative w-full aspect-video overflow-hidden"
@@ -43,12 +43,19 @@ const RecentProjects = () => {
               <h3 className="font-bold text-lg lg:text-xl text-white">
                 {item.title}
               </h3>
-              <p
-                className="text-sm mt-2 flex-1"
-                style={{ color: "#BEC1DD" }}
-              >
-                {item.des}
-              </p>
+              <div className="relative flex-1">
+                <p
+                  className="text-sm mt-2 line-clamp-2"
+                  style={{ color: "#BEC1DD" }}
+                >
+                  {item.des}
+                </p>
+                <div className="pointer-events-none absolute inset-x-0 top-0 z-30 rounded-xl bg-[#10132E] p-4 opacity-0 shadow-[0_8px_24px_rgba(0,0,0,0.5)] transition-opacity duration-300 group-hover:opacity-100">
+                  <p className="text-sm" style={{ color: "#BEC1DD" }}>
+                    {item.des}
+                  </p>
+                </div>
+              </div>
 
               <div className="flex items-center justify-between mt-5">
                 <div className="flex items-center">
