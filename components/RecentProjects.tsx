@@ -25,17 +25,19 @@ const RecentProjects = () => {
               title={item.link.replace(/^https?:\/\//, "")}
               href={item.link}
             >
-              <div className="relative flex items-center justify-center sm:w-96 w-[95vw] overflow-hidden h-[40vh] lg:h-[30vh] mb-10">
+              <div className="relative flex items-center justify-center w-full overflow-hidden h-[40vh] lg:h-[30vh] mb-10">
                 <div
                   className="relative w-full h-full overflow-hidden lg:rounded-3xl"
                   style={{ backgroundColor: "#13162D" }}
                 >
-                  <img src="/bg.png" alt="bgimg" />
+                  <img src="/bg.png" alt="bgimg" className="w-full h-full object-cover" />
                 </div>
                 <img
                   src={item.img}
                   alt={item.title}
-                  className="z-10 absolute inset-0 w-full h-full object-cover lg:rounded-3xl"
+                  className={`z-10 absolute inset-0 w-full h-full lg:rounded-3xl ${
+                    item.imgFit === "contain" ? "object-contain p-8" : "object-cover"
+                  }`}
                 />
               </div>
 

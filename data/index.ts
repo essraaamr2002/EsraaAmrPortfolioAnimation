@@ -85,6 +85,7 @@ export const navItems = [
       title: "The TBS Club - Web Management System",
       des: "Responsive admin & operations platform for a multi-branch café chain, with modules for users, clients, baristas, branches, catalogs, offers, and dedicated Barista/Cashier workflows.",
       img: "https://tbs-staging-app.vercel.app/images/logo.svg",
+      imgFit: "contain",
       iconLists: ["/re.svg", "/ts.svg", "/tail.svg", "/c.svg"],
       link: "https://tbs-staging-app.vercel.app/apps/barista/Cashier/cashier-code/",
     },
